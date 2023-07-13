@@ -1,0 +1,5 @@
+* sourcetype=httpevent
+| eval hour=strftime(_time, "%H")
+| stats count by hour
+| eval lower_warning = 100
+| eval upper_warning = 1500
